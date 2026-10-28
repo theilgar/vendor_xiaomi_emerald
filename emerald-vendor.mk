@@ -1907,7 +1907,7 @@ PRODUCT_PACKAGES += \
     android.hardware.security.sharedsecret-service.mitee.xml \
     bluetooth_audio.xml \
     dms-service.xml \
-    gnss-default.xml \
+    gnss-default.mediatek.xml \
     gnss-mtk.xml \
     manifest_allocator.xml \
     manifest_cameraprovider.xml \
