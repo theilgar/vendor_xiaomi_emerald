@@ -1289,7 +1289,6 @@ PRODUCT_PACKAGES += \
     libaal_key \
     libaal_sec \
     libalsautils-v32 \
-    libalsautilsv2 \
     libanc_dc_base \
     libanc_hdr \
     libanc_hdr_adapter_AncSuperNightLite \
