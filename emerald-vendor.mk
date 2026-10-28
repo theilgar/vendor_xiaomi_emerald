@@ -1464,7 +1464,6 @@ PRODUCT_PACKAGES += \
     libsysenv \
     libteecli \
     libtflite_mtk \
-    libtinyalsav2 \
     libtrm \
     libudf \
     libvia-ril \
