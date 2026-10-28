@@ -2045,6 +2045,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     relative_install_path: "egl/mt6789",
     prefer: true,
     soc_specific: true,
@@ -17335,7 +17336,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libcodec2_mtk_vdec.so",
             ],
             shared_libs: [
-                "libformatter",
+                "libformatter_mtk",
                 "libdpframework",
                 "android.hardware.graphics.bufferqueue@2.0",
                 "libui",
@@ -17384,7 +17385,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libcodec2_mtk_venc.so",
             ],
             shared_libs: [
-                "libformatter",
+                "libformatter_mtk",
                 "libdpframework",
                 "android.hardware.graphics.bufferqueue@2.0",
                 "libui",
@@ -17818,7 +17819,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libformatter",
+    name: "libformatter_mtk",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -17826,7 +17827,7 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/libformatter.so",
+                "proprietary/vendor/lib64/libformatter_mtk.so",
             ],
             shared_libs: [
                 "libion_mtk",
@@ -27865,7 +27866,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libmnl",
+    name: "libmnl_mtk",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -27873,7 +27874,7 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/mt6789/libmnl.so",
+                "proprietary/vendor/lib64/mt6789/libmnl_mtk.so",
             ],
             shared_libs: [
                 "libcutils",
@@ -33723,6 +33724,7 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "libutils",
                 "libaudioclient",
+                "libaudiobase",
                 "libc++",
                 "libc",
                 "libm",
@@ -33784,6 +33786,7 @@ cc_prebuilt_library_shared {
                 "libui",
                 "libcutils",
                 "libaudioclient",
+                "libaudiobase",
                 "liblog",
                 "libaudiotoolkit",
                 "libc++",
@@ -34451,6 +34454,7 @@ cc_prebuilt_binary {
                 "libmtkrilutils",
                 "libsysenv",
                 "libmtkconfigutils",
+                "libmipc",
                 "liblog",
                 "libc++",
                 "libc",
@@ -34459,6 +34463,7 @@ cc_prebuilt_binary {
             ],
         },
     },
+    allow_undefined_symbols: true,
     compile_multilib: "64",
     strip: {
         none: true,
@@ -34704,6 +34709,67 @@ cc_prebuilt_binary {
     soc_specific: true,
 }
 
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.videotelephony-V1-ndk",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "android.hardware.common-V2-ndk",
+                "android.hardware.common.fmq-V1-ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.videotelephony-impl",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/hw/vendor.mediatek.hardware.videotelephony-impl.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libfmq",
+                "vendor.mediatek.hardware.videotelephony-V1-ndk",
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libbase",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    relative_install_path: "hw",
+    prefer: true,
+    soc_specific: true,
+}
+
 cc_prebuilt_binary {
     name: "vtservice_aidl",
     owner: "xiaomi",
@@ -34719,6 +34785,9 @@ cc_prebuilt_binary {
                 "libbase",
                 "libfmq",
                 "libhardware",
+                "libbinder_ndk",
+                "vendor.mediatek.hardware.videotelephony-V1-ndk",
+                "vendor.mediatek.hardware.videotelephony-impl",
                 "libc++",
                 "libc",
                 "libm",
@@ -34727,6 +34796,7 @@ cc_prebuilt_binary {
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -34825,7 +34895,7 @@ cc_prebuilt_binary {
                 "proprietary/vendor/bin/mnld",
             ],
             shared_libs: [
-                "libmnl",
+                "libmnl_mtk",
                 "libcurl",
                 "libcutils",
                 "libnvram",

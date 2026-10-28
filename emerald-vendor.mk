@@ -1402,7 +1402,7 @@ PRODUCT_PACKAGES += \
     libfgauge_gm30 \
     libfile_op \
     libforkexecwrap \
-    libformatter \
+    libformatter_mtk \
     libged \
     libgpu_aux \
     libgpud \
@@ -1741,7 +1741,7 @@ PRODUCT_PACKAGES += \
     libimageio_plat_drv \
     libimageio_plat_pipe \
     liblpcnr \
-    libmnl \
+    libmnl_mtk \
     libmsnr \
     libmtkcam.atmseventmgr \
     libmtkcam.eventcallback \
