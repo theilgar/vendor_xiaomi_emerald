@@ -34632,10 +34632,10 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-    name: "bluetooth_audio.xml",
+    name: "bluetooth_audio.mediatek.xml",
     owner: "xiaomi",
     src: "proprietary/vendor/etc/vintf/manifest/bluetooth_audio.xml",
-    filename_from_src: true,
+    filename: "bluetooth_audio.mediatek.xml",
     sub_dir: "vintf/manifest",
     soc_specific: true,
 }

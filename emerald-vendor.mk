@@ -1905,7 +1905,7 @@ PRODUCT_PACKAGES += \
     android.hardware.security.keymint-service.mitee.xml \
     android.hardware.security.secureclock-service.mitee.xml \
     android.hardware.security.sharedsecret-service.mitee.xml \
-    bluetooth_audio.xml \
+    bluetooth_audio.mediatek.xml \
     dms-service.xml \
     gnss-default.mediatek.xml \
     gnss-mtk.xml \
