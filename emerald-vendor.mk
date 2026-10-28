@@ -1900,7 +1900,7 @@ PRODUCT_PACKAGES += \
     EngineerMode \
     com.android.hotwordenrollment.common.util \
     android.hardware.audio.effect.service-aidl.xml \
-    android.hardware.audio.service-aidl.xml \
+    android.hardware.audio.service-aidl.mediatek.xml \
     android.hardware.gatekeeper-service.mitee.xml \
     android.hardware.security.keymint-service.mitee.xml \
     android.hardware.security.secureclock-service.mitee.xml \

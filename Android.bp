@@ -34587,10 +34587,10 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-    name: "android.hardware.audio.service-aidl.xml",
+    name: "android.hardware.audio.service-aidl.mediatek.xml",
     owner: "xiaomi",
     src: "proprietary/vendor/etc/vintf/manifest/android.hardware.audio.service-aidl.xml",
-    filename_from_src: true,
+    filename: "android.hardware.audio.service-aidl.xml",
     sub_dir: "vintf/manifest",
     soc_specific: true,
 }
