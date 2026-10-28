@@ -9,6 +9,10 @@
 			<Category name="FastRecord"/>
 			<Category name="Unprocessed"/>
 			<Category name="VoicePerformance"/>
+			<Category name="CUSTOMIZATION1"/>
+		</CategoryType>
+		<CategoryType name="Feature">
+			<Category name="HDR"/>
 		</CategoryType>
 	</CategoryTypeList>
 	<ParamUnit>

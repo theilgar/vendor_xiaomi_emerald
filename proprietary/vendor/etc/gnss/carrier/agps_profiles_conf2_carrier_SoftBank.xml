@@ -18,6 +18,8 @@
 
   <agps_setting
     ignore_si_for_e911="true"
+    ignore_emergency_ext_secs_from_framework="true"
+    emergency_ext_secs="300"
   />
 
   <gnss_setting
@@ -31,14 +33,17 @@
   />
 
   <up_setting
-    ca_enable="true"
+    imsi_enable="true"
     dedicated_apn_enable="false"
     preferred_2g3g_cell_age="0"
-    lpp_enable="false"
+    up_rrlp_in_4g_disable="true"
     allow_ni_for_gps_off="true"
     up_lppe_enable="false"
     esupl_apn_mode="3"
     ip_version_prefer="1"
+    tc10_ignore_ni_reject="true"
+    ut_connection="20"
+    ignore_no_fqdn_ni="true"
   />
 
 </mtk_agps_profiles>

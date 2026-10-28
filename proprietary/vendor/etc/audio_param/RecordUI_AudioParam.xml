@@ -39,6 +39,7 @@
       <Param name="UL Sample Rate" value="48000"/>
       <Param name="UL Gain Set" value="1"/>
       <Param name="UL Gain Name" value="mic1,mic2,mic3,mic4"/>
+      <Param name="GainBoost visibility" value="1"/>
     </ParamUnit>
     <ParamUnit param_id="1">
       <Param name="DRC+DG visibility" value="1"/>
@@ -54,6 +55,7 @@
       <Param name="UL Sample Rate" value="16000"/>
       <Param name="UL Gain Set" value="1"/>
       <Param name="UL Gain Name" value="mic1,mic2,mic3,mic4"/>
+      <Param name="GainBoost visibility" value="1"/>
     </ParamUnit>
     <ParamUnit param_id="2">
       <Param name="DRC+DG visibility" value="1"/>
@@ -69,6 +71,7 @@
       <Param name="UL Sample Rate" value="16000"/>
       <Param name="UL Gain Set" value="1"/>
       <Param name="UL Gain Name" value="mic1,mic2,mic3,mic4"/>
+      <Param name="GainBoost visibility" value="1"/>
     </ParamUnit>
     <ParamUnit param_id="3">
       <Param name="DRC+DG visibility" value="1"/>
@@ -84,6 +87,7 @@
       <Param name="UL Sample Rate" value="48000"/>
       <Param name="UL Gain Set" value="1"/>
       <Param name="UL Gain Name" value="mic1,mic2,mic3,mic4"/>
+      <Param name="GainBoost visibility" value="1"/>
     </ParamUnit>
     <ParamUnit param_id="4">
       <Param name="DRC+DG visibility" value="1"/>
@@ -99,6 +103,7 @@
       <Param name="UL Sample Rate" value="48000"/>
       <Param name="UL Gain Set" value="1"/>
       <Param name="UL Gain Name" value="mic1,mic2,mic3,mic4"/>
+      <Param name="GainBoost visibility" value="1"/>
     </ParamUnit>
     <ParamUnit param_id="5">
       <Param name="DRC+DG visibility" value="1"/>
@@ -114,6 +119,7 @@
       <Param name="UL Sample Rate" value="48000"/>
       <Param name="UL Gain Set" value="1"/>
       <Param name="UL Gain Name" value="mic1,mic2,mic3,mic4"/>
+      <Param name="GainBoost visibility" value="1"/>
     </ParamUnit>
     <ParamUnit param_id="6">
       <Param name="DRC+DG visibility" value="1"/>
@@ -129,6 +135,7 @@
       <Param name="UL Sample Rate" value="48000"/>
       <Param name="UL Gain Set" value="1"/>
       <Param name="UL Gain Name" value="mic1,mic2,mic3,mic4"/>
+      <Param name="GainBoost visibility" value="1"/>
     </ParamUnit>
     <ParamUnit param_id="7">
       <Param name="DRC+DG visibility" value="1"/>
@@ -144,6 +151,7 @@
       <Param name="UL Sample Rate" value="16000"/>
       <Param name="UL Gain Set" value="1"/>
       <Param name="UL Gain Name" value="mic1,mic2,mic3,mic4"/>
+      <Param name="GainBoost visibility" value="1"/>
     </ParamUnit>
     <ParamUnit param_id="8">
       <Param name="DRC+DG visibility" value="-1"/>
@@ -159,6 +167,7 @@
       <Param name="UL Sample Rate" value="16000"/>
       <Param name="UL Gain Set" value="1"/>
       <Param name="UL Gain Name" value="mic1,mic2,mic3,mic4"/>
+      <Param name="GainBoost visibility" value="1"/>
     </ParamUnit>
     <ParamUnit param_id="9">
       <Param name="DRC+DG visibility" value="-1"/>
@@ -173,7 +182,8 @@
       <Param name="UL AES LB visibility" value="-1"/>
       <Param name="UL Sample Rate" value="16000"/>
       <Param name="UL Gain Set" value="2"/>
-      <Param name="UL Gain Name" value="mic1_adc1,mic1_adc2,mic2_adc3,mic2_adc4"/>
+      <Param name="UL Gain Name" value="mic1_adc1,mic1_adc2,mic2_adc3,mic2_adc4,mic3_adc5,mic3_adc6"/>
+      <Param name="GainBoost visibility" value="1"/>
     </ParamUnit>
     <ParamUnit param_id="10">
       <Param name="DRC+DG visibility" value="-1"/>
@@ -189,6 +199,7 @@
       <Param name="UL Sample Rate" value="16000"/>
       <Param name="UL Gain Set" value="2"/>
       <Param name="UL Gain Name" value="mic1_adc1,mic1_adc2"/>
+      <Param name="GainBoost visibility" value="1"/>
     </ParamUnit>
   </ParamUnitPool>
 </AudioParam>

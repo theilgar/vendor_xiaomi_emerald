@@ -49,8 +49,6 @@
         }
       ]
     },
-
-
     {
       "Name": "LowIoPriority",
       "Actions": [
@@ -208,32 +206,6 @@
           {
             "Controller": "memory",
             "Path": "system"
-          }
-        }
-      ]
-    },
-    {
-      "Name": "FreezerThawed",
-      "Actions": [
-        {
-          "Name": "SetAttribute",
-          "Params":
-          {
-            "Name": "FreezerState",
-            "Value": "THAWED"
-          }
-        }
-      ]
-    },
-    {
-      "Name": "FreezerFrozen",
-      "Actions": [
-        {
-          "Name": "SetAttribute",
-          "Params":
-          {
-            "Name": "FreezerState",
-            "Value": "FROZEN"
           }
         }
       ]

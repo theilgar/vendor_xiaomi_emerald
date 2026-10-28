@@ -5,7 +5,7 @@
 			<Category name="Default"/>
 			<Category name="App1"/>
 			<Category name="App2"/>
-			<Category name="HDR_RECORD" feature_option="AUDIO_PMIC_4ADC_SUPPORT"/>
+			<Category name="HDR_RECORD" feature_option="HDR_RECORD_SUPPORT"/>
 		</CategoryType>
 		<CategoryType name="Application">
 			<CategoryGroup name="Sound recording">

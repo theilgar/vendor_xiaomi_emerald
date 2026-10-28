@@ -54,5 +54,6 @@
 		<Param name="DV visibility" type="int"/>
 		<Param name="UL Gain Set" type="int"/>
 		<Param name="UL Gain Name" type="string_array"/>
+		<Param name="GainBoost visibility" type="int"/>
 	</ParamUnit>
 </ParamUnitDesc>

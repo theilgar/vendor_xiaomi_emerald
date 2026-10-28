@@ -34,5 +34,6 @@
 	</CategoryTypeList>
 	<ParamUnit>
 		<Param name="ul_gain" type="byte_array"/>
+		<Param name="swagc_ignore" type="byte_array"/>
 	</ParamUnit>
 </ParamUnitDesc>

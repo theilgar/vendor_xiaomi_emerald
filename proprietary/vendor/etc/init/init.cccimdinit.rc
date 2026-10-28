@@ -28,17 +28,13 @@ on post-fs-data
 
 #SeLinux
 
+setprop vendor.md_ee_reset_time.debug 0
+
 service ccci_mdinit /vendor/bin/ccci_mdinit 0
     user system
-    group radio system
+    group radio system wakelock
     class core
     priority -20
     ioprio rt 4
-    oneshot
-
-service ccci3_mdinit /vendor/bin/ccci_mdinit 2
-    user system
-    group radio system
-    class core
     oneshot
 

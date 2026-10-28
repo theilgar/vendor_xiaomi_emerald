@@ -110,7 +110,7 @@
         <maxBrightness>
             <maxBrightnessParamName>maxBrightnessEnable typicalBrightness startBrightness brightnessStep</maxBrightnessParamName>
             <maxBrightnessEnable>0</maxBrightnessEnable>
-            <typicalBrightness>450</typicalBrightness>
+            <typicalBrightness>500</typicalBrightness>
             <startBrightness>408</startBrightness>
             <brightnessStep>1.5</brightnessStep>
         </maxBrightness>
@@ -179,11 +179,11 @@
         </MtkNode>
         <rhyeyecare>
             <rhyeyecareParamName>RhyEyecRiseZone RhyEyecDayZone RhyEyecPmDropZone RhyEyecNightDropZone RhyEyecNightZone RhynativeCCT HourTime RhyEyedimmingTime RhyCctStepMs RhyD65Coeff0 RhyD65Coeff1 RhyD65Coeff2 RhyD65Coeff3 RhyD65Coeff4 RhyD65Coeff5 RhyD65Coeff6 RhyD65Coeff7 RhyD65Coeff8</rhyeyecareParamName>
-            <RhyEyecRiseZone>2500 11000 2500 11000 2500 11500</RhyEyecRiseZone>
-            <RhyEyecDayZone>6500 6500 6000</RhyEyecDayZone>
-            <RhyEyecPmDropZone>500 15500 500 15500 500 15000</RhyEyecPmDropZone>
-            <RhyEyecNightDropZone>1000 26000 1000 26000 1000 25500</RhyEyecNightDropZone>
-            <RhyEyecNightZone>4000 4000 3500</RhyEyecNightZone>
+            <RhyEyecRiseZone>2500 11000 2500 10500 2500 11500</RhyEyecRiseZone>
+            <RhyEyecDayZone>6500 7000 6000</RhyEyecDayZone>
+            <RhyEyecPmDropZone>500 15500 500 16000 500 15000</RhyEyecPmDropZone>
+            <RhyEyecNightDropZone>1000 26000 1000 26500 1000 25500</RhyEyecNightDropZone>
+            <RhyEyecNightZone>4000 4500 3500</RhyEyecNightZone>
             <RhynativeCCT>6500</RhynativeCCT>
             <HourTime>0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24</HourTime>
             <RhyEyedimmingTime>4</RhyEyedimmingTime>

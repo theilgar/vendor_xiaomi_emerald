@@ -1,4 +1,4 @@
-service vendor.gralloc-v2 /vendor/bin/hw/android.hardware.graphics.allocator-V2-service-mediatek
+service vendor.gralloc-v2 /vendor/bin/hw/mt6789/android.hardware.graphics.allocator-V2-service-mediatek.mt6789
     class hal animation
     user system
     group graphics drmrpc

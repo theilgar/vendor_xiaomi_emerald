@@ -2,13 +2,17 @@
 <ParamTreeView version="1.1">
 	<TreeRoot name="TX_DRC+DG">
 		<Sheet/>
-		<Feature name="TX DRC">
+    <Feature name="TX DRC: 5.1">
 			<FieldList>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="TX ASLR/DG Separate Switch"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="TX expander switch"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="TX expander suppression gain"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="TX expander level + 10dB"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="UL Limiter TH"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="UL IIR cut off frequency"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="75Hz high-pass IIR"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="comfort noise"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="comfort noise level"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="TX Mic IIR"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="TX comfort noise"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="TX comfort noise level"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="TX IIR switch"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="TX FIR switch"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="TX GDRC DG Gain switch"/>
@@ -30,7 +34,7 @@
 	</TreeRoot>
 	<TreeRoot name="NREC">
 		<Sheet/>
-		<Feature name="MagiAEC: 18.5">
+    <Feature name="MagiAEC: 22.2">
 			<FieldList>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="Switch"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="device Mode"/>
@@ -51,7 +55,7 @@
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="NLP Suppression behavior control"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="NLP"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="remove tone in echo ref"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="BT Delay Control"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="Reference delay"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="New echo suppression"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="0-2k residual echo weighting for linear part"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="0-2k residual echo weighting for non-linear part"/>
@@ -93,12 +97,18 @@
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="AES rate fast"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="Band0 NE VAD"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="AES overestimate"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="EC protect band"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="EC band0 overfit switch"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="EC protect threshold"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="EC protect gain bound"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="EC band1 stepsize enlarge"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="EC band1 stepsize ctrl and upper bound"/>
 			</FieldList>
 			<CategoryPathList>
 				<Category path=""/>
 			</CategoryPathList>
 		</Feature>
-		<Feature name="MagiAEC-LSPK: 18.5">
+    <Feature name="MagiAEC-LSPK: 22.2">
 			<FieldList>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="0-2k LSPK Mic2 residual echo weighting for linear part"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="0-2k LSPK Mic2 residual echo weighting for non-linear part"/>
@@ -121,9 +131,45 @@
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="Reverb 2-4k ES gain lower bound"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="Reverb 4-8k ES gain lower bound"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="Reverb Switch speed"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="LSPK mic switch Ref clipping threshold"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="Band0 SER stepsize effect"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="FFT AES switch"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="FFT ES switch"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="FFT ES 0-0.5k residual echo linear weight"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="FFT ES 0.5-1k residual echo linear weight"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="FFT ES 1-2k residual echo linear weight"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="FFT ES 2-4k residual echo linear weight"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="FFT ES 4-8k residual echo linear weight"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="FFT ES 8-16k residual echo linear weight"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="FFT ES N power smooth THD"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="FFT ES FSH Gain THD"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="FFT ES 0-0.5k residual echo non linear weight"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="FFT ES 0.5-1k residual echo non linear weight"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="FFT ES 1-2k residual echo non linear weight"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="FFT ES 2-4k residual echo non linear weight"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="FFT ES 4-8k residual echo non linear weight"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="FFT ES 8-16k residual echo non linear weight"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="FFT ES nonlinear echo startup THD"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="FFT ES comb filter echo THD"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="FFT ES under estimate THD"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="FFT ES under estimate range"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="FFT ES under estimate switch"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="FFT AES observe band 0 switch"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="FFT ES gain lower bound switch"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="FFT ES initial coefficient"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="FFT ES nonlinear echo tracking switch"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="FFT ES nonlinear echo start frequency"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="FFT ES nonlinear echo end frequency"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="FFT ES HR apply power THD"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="FFT ES HR cal gain mode"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="FFT ES NS tracking echo source"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="FFT ES cal noise alpha rate(echo)"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="FFT ES linear echo tracking startup frequency"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="FFT ES low band echo mapping vad level"/>
 			</FieldList>
 			<CategoryPathList>
 				<Category path="Hands-free"/>
+        <Category path="MagiConference"/>
 			</CategoryPathList>
 		</Feature>
 				<Feature name="TX Whistle">
@@ -135,158 +181,134 @@
 				<Category path="Hands-free"/>
 			</CategoryPathList>
 		</Feature>
-		<Feature name="MagiNR(TX): 5.5">
+    <Feature name="MagiNR(TX): 6.5">
 			<FieldList>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="TX NR Switch"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="TX NR Quick learning"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="TX DC Remove Offset Switch"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="TX NR for high frequency"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="TX NR suppression strength"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="TX Adaptive gain control"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="TX mute 1s"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="TX NR Init 100ms"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="TX NR Init LengthExtend"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="TX Pre Emphasis Switch"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="TX Ambient noise calibration"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="TX Handfree Tone Detection"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="TX expander switch"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="TX expander suppression gain"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="TX NR Noise Adaption Rate"/>
 			</FieldList>
 			<CategoryPathList>
-				<Category path="Handsfree"/>
+        <Category path=""/>
+      </CategoryPathList>
+    </Feature>
+    <Feature name="MagiDualNR and Magiconference [DMNR]">
+      <FieldList>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="DMNR Single-Mic Mode Switch"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="DMNR Single-Mic Mode Enable VAD Integration with DRC"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="DMNR Single-Mic Mode Enable Gain Integration with AEC"/>
+      </FieldList>
+      <CategoryPathList>
+        <Category path="Handset"/>
+        <Category path="Handsfree"/>
+        <Category path="MagiConference"/>
 			</CategoryPathList>
 		</Feature>
-		<Feature name="MagiDualNR: 14.4">
+    <Feature name="MagiDualNR: 18.2 [DMNR]">
 			<FieldList>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="DUMMY"/>
+      </FieldList>
+      <CategoryPathList>
+        <Category path="Handset"/>
+      </CategoryPathList>
+    </Feature>
+    <Feature name="MagiDualNR - Normal Position General Control">
+      <FieldList>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="MagiNRDual switch"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Switch or Lower bound of NS Gain"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="NS mode"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Stationary noise tracking strength"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Non-stationary noise tracking strength"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="NS-TMOS detection"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="NS-Gain LB when TMOS detected"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="High band(4k-8k) speech protection"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Energy based HB VAD switch"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="NC switch"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Look Ahead Delay of NC(more delay, better cancellation)"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="NC strength"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Phone up or down cover range(normal position)"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Mic selection switch"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Mic selection VAD threshold(larger value, VAD on easier)"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Mic2 blocking algorithm switch"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Mic2 expander"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Mic2 IIR"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="WA expander"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="DMNR ASLR Gain release rate"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="ABM pass shadow coef at switch"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="ABM consider min of band1 and band2 at normal"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="ABM consider min of band1 and band2 at WA"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Maximum DMNR ASLR Gain level bound"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="DMNR ASLR Gain switch"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="NS Switch or Gain lowerbound (Normal)"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="NS 1-mic VAD THD (Normal)"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="NS Lowband(0-4k) 2-mic VAD THD (Normal)"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="NS Lowband(0-4k) Non-stationary noise suppression strength (Normal)"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="NS Highband(4-8k) 2-mic VAD THD (Normal)"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="NS Highband(4-8k) Non-stationary noise suppression strength (Normal)"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="NS Highband(4k-8k) speech protection"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="NS Strength when VAD on (Normal)"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="NS Strength when VAD off (Normal)"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="NS Noise Over-estimation (Normal)"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="NS Strong DC suppression"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="NS Dynamic LB (Normal)"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="NS Less Gain Protection (Normal)"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="NS Initial Convergence"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="NC switch (Normal)"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="NC strength (Normal)"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="NC Look Ahead Delay(more delay, better cancellation)"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="NC max band"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="NC Disable NC function threshold"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="VAD ABM VAD THD (Normal)"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="VAD Stricter VAD(Normal)"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="VAD Phone up or down cover range (PD VAD)"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="VAD Band 2 PD VAD"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="VAD Fix PD min at initial value"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Initial Suppression when reset"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Speech Content VAD Time Smoothing"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Speech Content VAD Minimum Statistics Window Length"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Adaptive Noise Source (Normal)"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="NC Protection"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="GCC BeamProb Delay Index (Normal)"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="GCC BeamProb VAD THD (Normal)"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="NS Speech Protection Based on PD"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="PD In-speech nonstaionary noise suppression weight"/>
+      </FieldList>
+      <CategoryPathList>
+        <Category path="Handset"/>
+      </CategoryPathList>
+    </Feature>
+    <Feature name="MagiDualNR - Wide-Angle Position Control">
+      <FieldList>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="WA DMNR switch"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="WA DMNR switch counter threshold(larger value, faster switch)"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="1-mic VAD THD for cal-data switch(smaller value, VAD on easier)"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="GCC delay THD for cal-data switch"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="GCC prob WA THD for cal-data switch(smaller value, switch easier)"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="1-mic VAD as PD VAD at WA"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="GCC prob WA THD for ABM stepsize update(smaller value, learning easier)"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="ABM VAD THD at WA(larger value, VAD on easier)"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Consider GCC prob WA for ENH DMNR VAD at WA"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="LB of GCC delay for GCC prob WA"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="UB of GCC delay for GCC prob WA"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="GCC prob WA VAD THD for speech prob at WA(smaller value, switch easier)"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Consider Well-cal VAD for speech prob at WA"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Consider GCC prob VAD for speech prob at WA"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Non-stationary noise tracking strength at WA"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Switch or Lower bound of NS Gain at WA"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="NC max band"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="ABM Taps"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Initial Convergence"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="VAD hysteresis"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Adaptive VAD hysteresis"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Strong nonstationary suppression"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Less NS Gain"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Dynamic NS LB in normal position"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Dynamic NS LB in Wide-Angle"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Dynamic NS LB in Mic2"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Adaptive Noise Fast Converge"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="TMOS Detection THD in Mic1"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Normal Position Harmonic Reconstruction"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Normal Position Pitch Protection"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="WA expander"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="WA DMNR switch cooldown"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="WA DMNR Cover Range"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="WA DMNR Minimal Switch Time"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="NS Switch or Gain lowerbound (WA)"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="NS 1-mic VAD THD (WA)"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="NS Lowband(0-4k) 2-mic VAD THD (WA)"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="NS Lowband(0-4k) Non-stationary noise suppression strength (WA)"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="NS Highband(4-8k) 2-mic VAD THD (WA)"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="NS Highband(4-8k) Non-stationary noise suppression strength (WA)"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="NS Strength when VAD on (WA)"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="NS Strength when VAD off (WA)"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="NS Noise Over-estimation (WA)"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="NS Dynamic LB (WA)"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="NC switch (WA)"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="NC strength (WA)"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Adaptive Noise Source (WA)"/>
+
+
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="VAD ABM VAD THD (WA)"/>
+
 				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="WA Position Harmonic Reconstruction"/>
 				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="WA Position Pitch Protection"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Mic2 Harmonic Reconstruction"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Mic2 Pitch Protection"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Noise Level detection for Harmonic Reconstruction"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="HR HB Skip"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="HR HB Nonlinear shaping"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="NS Strong HB suppression"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="NS Strong DC suppression"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Strong Suppression based on mic1 mic2 power difference information"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Noise underestimation when VAD on"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Band 2 PD VAD"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="ABM update when mic2 blocking"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Stationary Noise Over-estimation for TMOS"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="ABM learning speed"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="ABM learn fast only in high SNR"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Power Ratio Scaler Modifier"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Switch or lower bound of MagiNRDual-NS Gain"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Low SNR detection THD"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Band0p5 Power Ratio Scaler Modifier"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Disable NC function threshold"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="SNRI Expander switch"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="SNRI Expander Gain LB"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="SNRI Expander Gain Under-estimation"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="SNRI Expander Triggered THD"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Replace PR with PD VAD for cal-data switch"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="PR THD for cal-data switch"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="WA switch VAD ONLY consider 1-mic VAD"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Disable Well-cal VAD at WA"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Well-cal shadow VAD bias ctrl"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Band1 SNR diff of cal-data as PD min"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Disable PD VAD at WA"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Phone up or down cover range at WA"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Fb stationary noise THD for high SNR for ENH_DMNR_VAD"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Consider Well-cal ABM PD VAD as ENH_DMNR_VAD"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="ABM normal nlms stepsize under-estimate ratio"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="ABM shadow nlms stepsize"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="LB of 1-mic VAD for ABM normal stepsize at WA"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="HB of 1-mic VAD for ABM normal stepsize at WA"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Disable NC at WA"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Start band of NC at WA"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="End band of NC at WA"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Sb 1-mic vad THD for ABM normal stepsize at WA"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="ABM shadow THD when cal-data switch"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Band range of GCC"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Rise rate for GCC PHAT"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Fall rate for GCC PHAT"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Band1 VAD on at WA"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="GCC delay THD for ABM"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="ABM VAD THD at normal if consider min of band1 + 2"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="AGC skip FE VAD"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Skip MCRA VAD for GCC updating"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Consider PD VAD to improve cal-data switch"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Fix PD min at initial value"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Consider PD VAD to improve cal-data switch"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Reduce GCC prob WA THD for ABM stepsize when high SNR at WA"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="GCC prob THD for ABM stepsize when high SNR at WA"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Consider SNR to adjust ABM VAD THD at WA"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="ABM VAD THD when high SNR at WA"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="ABM VAD THD when high SNR at normal if  consider band1 + 2"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="GCC delay THD for ABM step size at WA"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="ENH DMNR VAD skip consider high SNR VAD if FE VAD on at WA"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Skip FE VAD for ABM normal NLMS stepsize update"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Reduce GCC prob THD for ABM stepsize update when GCC only consider 0~2kHz"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Low SNR detection THD for ABM VAD THD at WA"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Normal power ratio THD for cal-data switch if only calibrate normal position"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="TMOS threshold for WA"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="WA TMOS control"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Lower bound of MagiNRDual-NS Gain for mic2"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Mic2 stationary noise tracking strength"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Mic2 stationary noise tracking VAD threshold"/>
+      </FieldList>
+      <CategoryPathList>
+        <Category path="Handset"/>
+      </CategoryPathList>
+    </Feature>
+    <Feature name="MagiDualNR - Mic Selection Control">
+      <FieldList>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="Mic1 blcoking detection switch"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="Mic1 blcoking detection VAD threshold(larger value, VAD on easier)"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="Mic2 blocking algorithm switch"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="Mic2 expander"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="Mic2 IIR"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="NS Gain lowerbound (Mic2)"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="NS Dynamic LB (Mic2)"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="NS 1-mic VAD THD (Mic2)"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="NS Noise Over-estimation (Mic2)"/>
 				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Switch to Mic1 speed THD"/>
 				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Switch to Mic2 speed THD"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Lower bound of MagiNRDual-NS Gain for mic2 TMOS"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="NS Gain lowerbound (Mic2-TMOS)"/>
 				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Mic2 direction VAD threshold"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Reduce DMNR adaptive TX gain when mic2"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Modifier to DMNR adaptive TX gain when mic2"/>
 				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Mic siwtch algorithm 250~750Hz mic1/mic2 energy threshold"/>
 				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="prevent finger touch from selecting to mic1"/>
 				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Mic2 direction detection"/>
@@ -302,27 +324,141 @@
 				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Switch to mic1 speed THD"/>
 				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="WA Ctrl Switch for Mic2 Blocking"/>
 				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Lower bound of MagiNRDual-NS Gain for mic1"/>
-				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Mic siwtch algorithm HB 2k~4k Hz (if cal [23] bit 0 = 1 HB is 1k~3k)"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Mic siwtch algorithm HB 2k~4k Hz"/>
 				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Mic1 or Mic2 band 1 power thd for one-mic VAD"/>
 				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Mic1 high band power threshold"/>
 				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="FE VAD thd for mic switch"/>
-				<!--Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Mic2 HB thd for mic2 Blocking Switch (if cal [23] bit 0 = 1 HB is 1k~3k otherwise 2k~4k)"/-->
-				<!--Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Mic2 HB2 thd2 for mic2 Blocking Switch (if cal [23] bit 0 = 1 HB is 1k~3k otherwise 2k~4k)"/-->
-				<!--Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Mic2 HB Abs Power thd for mic2 Blocking"/-->
-				<!--Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Mic1 LB Abs Power thd for mic2 Blocking (250HZ (Band0))"/-->
-				<!--Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Mic2 LB Abs Power thd for mic2 Blocking (250HZ (Band0))"/-->
-				<!--Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Mic2 LB2 Abs Power thd for mic2 Blocking (250~750 HZ (Band1))"/-->
-				<!--Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Mic2 FB Abs Power thd for mic2 Blocking (0~8K HZ)"/-->
-				<!--Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Stationary Noise Over-estimation for Mic2 Blocking"/-->
 				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Mic2 band0 Power thrshold for mic Selection mic2 band 0 power threshold"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Mic2 HB thd for mic2 Blocking Switch"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Mic2 HB2 thd2 for mic2 Blocking Switch"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Mic2 HB Abs Power thd for mic2 Blocking"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Mic1 LB Abs Power thd for mic2 Blocking (250HZ (Band0))"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Mic2 LB Abs Power thd for mic2 Blocking (250HZ (Band0))"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Mic2 LB2 Abs Power thd for mic2 Blocking (250~750 HZ (Band1))"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Mic2 FB Abs Power thd for mic2 Blocking (0~8K HZ)"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Stationary Noise Over-estimation for Mic2 Blocking"/>
+      </FieldList>
+      <CategoryPathList>
+        <Category path="Handset"/>
+      </CategoryPathList>
+    </Feature>
+    <Feature name="MagiDualNR - Harmonic Reconstruction Control">
+      <FieldList>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="HR Comb Filter THD"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="HR Pitch Boost Strength"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="HR Comb Filter Strength"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="HR Harmonic Clarity Level"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="HR Peak Protection Strength"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="HR Temporal Smooth Strength"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="HR Harmonic Generation Strength"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="HR Highband Protection"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="HR 3Quest Mode"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Normal HR Switch"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Normal HR Range of Effect"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Normal HR Power Compensation Upperbound"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Normal HR Power Compensation Threshold"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="WA HR Switch"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="WA HR Range of Effect"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="WA HR Power Compensation Upperbound"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="WA HR Power Compensation Threshold"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Mic2 HR Switch"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Mic2 HR Range of Effect"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Mic2 HR Power Compensation Upperbound"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Mic2 HR Power Compensation Threshold"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Far-end HR Switch"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Far-end HR Range of Effect"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Far-end HR Power Compensation Upperbound"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Far-end HR Power Compensation Threshold"/>
+      </FieldList>
+      <CategoryPathList>
+        <Category path="Handset"/>
+      </CategoryPathList>
+    </Feature>
+    <Feature name="MagiDualNR - Special Control">
+      <FieldList>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="DMNR ASLR Maximum Gain level bound"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="DMNR ASLR Gain switch"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="DMNR ASLR Gain release rate"/>
+
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="ABM GCC Band range"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="ABM GCC prob WA THD"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="ABM LB of GCC delay"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="ABM GCC delay Cover range (UB = LB + cover range)"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="ABM Taps"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="ABM learning speed"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="ABM regularization handover (Normal)"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="ABM Skip when FE VAD is on"/>
+
+
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="VAD Speech Content VAD: speech acceptance THD"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="VAD Speech Content VAD: noise rejection THD"/>
+
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="VAD Energy based HB VAD switch"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="VAD Well-cal shadow VAD bias ctrl"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="VAD hysteresis"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="VAD Adaptive hysteresis"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="VAD Power Ratio Scaler Modifier"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="VAD Band0p5 Power Ratio Scaler Modifier"/>
+
+
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="SNRI Expander switch"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="SNRI Expander Gain LB"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="SNRI Expander Gain Under-estimation"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="SNRI Expander Triggered THD"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="SNRI Expander Time Resolution"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="SNRI Expander FE Protection Mode"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="SNRI Expander 1-mic VAD THD"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="TMOS detection"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="TMOS Detection NOISE THD in Mic1"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="TMOS Detection POWER THD in Mic1"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="TMOS Status Handover Duration"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="TMOS Status Nonstationary noise weight"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="TMOS Status NS Strength"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="TMOS Status NS Gain LB Harder 10 dB"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="TMOS Status NS 1-mic VAD THD"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="TMOS Status Noise Over-estimation"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="TMOS Status Gain bound"/>
+
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Low SNR detection THD (noise power)"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="NS Switch or Gain lowerbound (Low SNR)"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="ES-NS Gain Integration"/>
 				<Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="FE VAD thd for VCE"/>
 			</FieldList>
 			<CategoryPathList>
 				<Category path="Handset"/>
 			</CategoryPathList>
 		</Feature>
-		<Feature name="MagiDualNR: 14.4 [common]">
+    <Feature name="MagiDualNR - Single Mic Mode Control">
+      <FieldList>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="DMNR Single Mic Minimum Statistics Window Length"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="DMNR Single Mic Likelihood Ratio Test Threshold"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="DMNR Single Mic Lowband VAD THD"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="DMNR Single Mic Highband VAD THD"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="DMNR Single Mic Stationary Noise Tracking speed"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="DMNR Single Mic Enable Fixed Stationary Noise when NE VAD on"/>
+      </FieldList>
+      <CategoryPathList>
+        <Category path="Handset"/>
+      </CategoryPathList>
+    </Feature>
+    <Feature name="MagiDualNR - Magiclarity4.0 Control">
 			<FieldList>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Magiclarity4 Switch"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Magiclarity4 Minimum Statistics Window Length"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Magiclarity4 Likelihood Ratio Test Threshold"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Magiclarity4 Lowband VAD THD"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Magiclarity4 Highband VAD THD"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Magiclarity4 Stationary Noise Tracking speed"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Magiclarity4 Enable Fixed Stationary Noise when NE VAD on"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Magiclarity4 Enable Fixed Stationary Noise When FE VAD on"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_nb2" name="Magiclarity4 Enable Dynamic MCRA window length"/>
+      </FieldList>
+      <CategoryPathList>
+        <Category path="Handset"/>
+      </CategoryPathList>
+    </Feature>
+    <Feature name="MagiDualNR - Noise Type Detection (NTD) [common]">
+      <FieldList>
 				<Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="Noise type detection NB switch"/>
 				<Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="Noise type detection WB switch"/>
 				<Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="Noise type detection rejection THD"/>
@@ -350,63 +486,126 @@
 				<Category path="Handset"/>
 			</CategoryPathList>
 		</Feature>
-		<Feature name="MagiConference: 3.3">
+    <Feature name="MagiConference: 4.5">
 			<FieldList>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="MagiNRDual switch for LSPK"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="MagiNRDual-NS switch"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="High band (> 1250Hz) speech quality protection"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="MagiNRDual-NS mode"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="LSPK DMNR (Single-NS)"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="MagiNRDual-NC switch"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Mic switch algorithm"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Non-stationary noise underestimation"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Mic switch algorithm VAD threshold"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Switch or lower bound of MagiNRDual-NS Gain (Mic1)"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Switch or lower bound of MagiNRDual-NS Gain (Mic2)"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Less DMNR-NS level"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Non-stationary noise weight"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Stationary noise weight"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Mic2 expander"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Mic2 IIR"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Improve VAD accurate for SPT car noise case"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="No less DMNR-NS level when VAD is off"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Stationary noise under estimation"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="SNR condition separation"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="SNR condition Threshold"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Less DMNR-NS level for low SNR"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Lower bound for low SNR"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="BGNT with NE improvement for LSPK mode"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="VAD threshold"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Stationary noise estimation speed"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Improve expander VAD with ABM VAD"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Improve expander VAD with Mic1 VAD"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Max index VAD enable"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Max index VAD threshold"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Mic siwtch algorithm 0~250Hz energy threshold"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Switch to Mic1 speed THD"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Switch to Mic2 speed THD"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Mic siwtch algorithm 250~750Hz energy threshold"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="Mic siwtch algorithm 2k~4kHz energy threshold"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="LSPK/Handset MagiNRDual switch"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="LSPK MagiNRDual switch"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="LSPK MagiNRDual-NS switch"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="LSPK MagiNRDual-NC switch"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="LSPK Mic switch algorithm (Mic1 blocking)"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="LSPK Normal Position NS 1-mic VAD THD"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="LSPK Normal Position Lowband (0-4K)NS 2-mic VAD THD"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="LSPK Normal Position NS Strength when VAD on"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="LSPK Normal Position NS Strength when VAD off"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="LSPK Normal Position Lowband (0-4K) Nonstationary noise weight when VAD on"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="LSPK Dynamic NS LB in normal position"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="LSPK Switch or lower bound of MagiNRDual-NS Gain (Mic1)"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="LSPK Speech direction VAD threshold"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="LSPK Less NS Gain"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="LSPK Initial Suppression when reset"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="LSPK Speech direction VAD Minimum Statistics Window Length"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="LSPK Mic2 expander"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="LSPK Mic2 IIR"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="LSPK Speech Content VAD: Noise Rejection THD"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="LSPK Speech Content VAD: Speech Acceptrance THD"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="LSPK Normal position Noise overestimation or underestimation"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="LSPK Improve expander VAD with 1-Mic VAD"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="LSPK Mic switch Mic2 Noise overestimation or underestimation"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="LSPK Mic switch Mic2 NS 1-mic VAD THD"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="LSPK Mic switch Switch or lower bound of MagiNRDual-NS Gain(Mic2)"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="LSPK Mic switch algorithm VAD threshold"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="LSPK Mic siwtch algorithm 0~250 Hz mic2-mic1 threshold"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="LSPK switch to Mic1 speed THD"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="LSPK switch to mic2 speed THD"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="LSPK Mic siwtch algorithm 250~750Hz mic1-mic2 threshold"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="LSPK Mic siwtch algorithm 2k~4k Hz mic1-mic2 threshold"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK HR Comb Filter THD"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK HR Pitch Boost Strength"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK HR Comb Filter Strength"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK HR Harmonic Clarity Level"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK HR Peak Protection Strength"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK HR Temporal Smooth Strength"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK HR Harmonic Generation Strength"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK HR Highband Protection"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK HR 3Quest Mode"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK Normal HR Switch"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK Normal HR Range of Effect"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK Normal HR Power Compensation Upperbound"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK Normal HR Power Compensation Threshold"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK WA HR Switch"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK WA HR Range of Effect"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK WA HR Power Compensation Upperbound"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK WA HR Power Compensation Threshold"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK Mic2 HR Switch"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK Mic2 HR Range of Effect"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK Mic2 HR Power Compensation Upperbound"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK Mic2 HR Power Compensation Threshold"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK Far-end HR Switch"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK Far-end HR Range of Effect"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK Far-end HR Power Compensation Upperbound"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK Far-end HR Power Compensation Threshold"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK Normal Position Highband (4-8K) NS 2-mic VAD THD"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK Normal Position Highband (4-8K) Nonstationary noise weight when VAD on"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK Speech Content VAD Time Smoothing"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK Speech Content VAD Minimum Statistics Window Length"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK Noise update during FE VAD on"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK Less gain much underestimation"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK Speech direction VAD Frequency Range"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK Dynamic NS LB in Mic2"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK NS Strong DC suppression"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK Normal Position Highband (4k-8k)Speech Protection"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK ES-NS Gain Integration"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK Mic2 Block PD THD"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK DT Protection"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK Mic2-blocking Protection"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK Switch or lower bound of MagiNRDual-NS Gain in low SNR condition"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK Low SNR detection THD"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK Noise overestimation ot underestimation in low SNR condition"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK Single-Mic mode in low SNR condition"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK Minimum Statistics Window Length"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK Likelihood Ratio Test Threshold"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK Lowband VAD THD"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK Highband VAD THD"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK Stationary Noise Tracking speed"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK Enable Fixed Stationary Noise when NE VAD on"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK Mic1 or Mic2 Full band power thd for 1-mic VAD"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK TMOS Status Handover Duration"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK TMOS Status Nonstationary noise weight"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK TMOS Status NS Strength"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK TMOS Status NS Gain LB Harder 10 dB"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK TMOS Status NS 1-mic VAD THD"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK TMOS Status Noise Over-estimation"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK TMOS detection"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK TMOS Status Gain bound"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK TMOS Detection NOISE THD in Mic1"/>
+        <Field audio_type="VoIPv2DMNR" param="dmnr_para_swb2" name="LSPK TMOS Detection POWER THD in Mic1"/>
 			</FieldList>
 			<CategoryPathList>
+				<Category path="Handsfree"/>
 				<Category path="MagiConference"/>
 			</CategoryPathList>
 		</Feature>
 	</TreeRoot>
 	<TreeRoot name="RX_DRC+DG">
 		<Sheet/>
-		<Feature name="RX DRC">
+    <Feature name="RX DRC: 5.1">
 			<FieldList>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="RX expander mode"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="RX DC Remove"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="RX expander switch"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="expander echo thd"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="RX expander suppression gain"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="RX expander level + 10dB"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="DL Limiter TH"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="DL expander suppression gain"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="RMS power limiter thd"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="20ms delay"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="LPF"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="RX HP filter cutoff freq (IIR)"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="RX AGC switch"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="RX IIR switch"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="RX FIR switch"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="RX HP filter cutoff freq (IIR)"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="RX bounder cascade GDRC switch"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="RX GDRC DG Gain switch"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="RX bounder release rate"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="VCE strength"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="VCE noise threshold"/>
 			</FieldList>
@@ -422,7 +621,7 @@
 				<Category path=""/>
 			</CategoryPathList>
 		</Feature>
-		<Feature name="MagiLoudness/MagiClarity: 3.5">
+    <Feature name="MagiClarity: 4.0">
 			<FieldList>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="MagiClarity switch"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="SNR trigger threshold"/>
@@ -440,12 +639,16 @@
 	</TreeRoot>
 	<TreeRoot name="NR">
 		<Sheet/>
-		<Feature name="MagiNR(RX): 5.5">
+    <Feature name="MagiNR(RX): 6.5">
 			<FieldList>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="RX NR Switch"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="RX NR Strength"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="RX expander switch"/>
-				<Field audio_type="VoIPv2" param="speech_mode_para" name="RX expander suppression gain"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="RX NR Init 100ms"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="RX NR Init LengthExtend"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="RX NR Strength Switch"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="RX RINI Switch"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="RX MD BandPwrRatio CounterTHD Switch"/>
+        <Field audio_type="VoIPv2" param="speech_mode_para" name="RX MD MusicDect NoisePow Flag"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="RX Comfort Noise Switch"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="RX Comfort Noise Level"/>
 				<Field audio_type="VoIPv2" param="speech_mode_para" name="RX NR Noise Adaption Rate"/>

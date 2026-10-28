@@ -7,6 +7,4 @@
     -->
     <GsmOnly Operator="460" EccList="112" />
     <GsmPref Operator="460" EccList="000,08,118,911,999" />
-    <CdmaPref Operator="460" EccList="110,119,120,122" />
-    <CdmaPref Operator="OP20" EccList="911" />
 </EccPrefTable>

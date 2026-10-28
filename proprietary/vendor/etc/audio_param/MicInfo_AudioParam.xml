@@ -24,7 +24,7 @@
     </ParamUnit>
     <ParamUnit param_id="1">
       <Param name="device_id" value="SPH1642HT5H_REV_B"/>
-      <Param name="device_in_type" value="AUDIO_DEVICE_IN_BUILTIN_MIC|AUDIO_DEVICE_IN_BACK_MIC"/>
+      <Param name="device_in_type" value="AUDIO_DEVICE_IN_BACK_MIC"/>
       <Param name="address" value="back"/>
       <Param name="mic_location" value="AUDIO_MICROPHONE_LOCATION_MAINBODY"/>
       <Param name="device_group" value="1"/>
@@ -54,7 +54,7 @@
     </ParamUnit>
     <ParamUnit param_id="3">
       <Param name="device_id" value="SPK0641HT4H_1_Rev_A"/>
-      <Param name="device_in_type" value="AUDIO_DEVICE_IN_BUILTIN_MIC|AUDIO_DEVICE_IN_BACK_MIC"/>
+      <Param name="device_in_type" value="AUDIO_DEVICE_IN_BACK_MIC"/>
       <Param name="address" value="back"/>
       <Param name="mic_location" value="AUDIO_MICROPHONE_LOCATION_MAINBODY"/>
       <Param name="device_group" value="1"/>

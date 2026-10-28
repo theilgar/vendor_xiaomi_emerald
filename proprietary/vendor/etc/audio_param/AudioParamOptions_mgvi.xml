@@ -44,7 +44,7 @@
  <Param name="MTK_A2DP_OFFLOAD_SUPPORT" value="yes" />
  <Param name="MTK_TTY_SUPPORT" value="yes" />
  <Param name="MTK_AUDIO_A2DP_LATENCY_IMPROVE" value="yes" />
- <Param name="MTK_BT_HEARING_AID_SUPPORT" value="" />
+ <Param name="MTK_BT_HEARING_AID_SUPPORT" value="yes" />
  <Param name="MTK_SPK_AP_SWMIX_PROCESS" value="" />
  <Param name="MTK_INCALL_HANDSFREE_DMNR" value="" />
  <Param name="MTK_VOW_SUPPORT" value="yes" />
@@ -73,4 +73,5 @@
  <Param name="VIR_MTK_VOIP_IIR_ENH_SUPPORT" value="yes" />
  <Param name="VIR_MTK_VOIP_IIR_MIC_SUPPORT" value="yes" />
  <Param name="CUST_XML_DIR" value="/data/vendor/audiohal/audio_param/" />
+ <Param name="PHONECALL_ACOUSTIC_SHOCK" value="no" />
 </AudioParamOptions>
