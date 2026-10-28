@@ -2143,7 +2143,7 @@ cc_prebuilt_library_shared {
                 "libxml2",
                 "libbinder_ndk",
                 "libprocessgroup",
-                "android.hardware.audio.effect-V2-ndk",
+                "android.hardware.audio.effect-V3-ndk",
                 "libfmq",
                 "libbase",
                 "libbluetooth_audio_session_aidl_mtk",
