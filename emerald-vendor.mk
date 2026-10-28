@@ -517,7 +517,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/emerald/proprietary/vendor/etc/init/init.volte_md_status.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.volte_md_status.rc \
     vendor/xiaomi/emerald/proprietary/vendor/etc/init/init.volte_stack.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.volte_stack.rc \
     vendor/xiaomi/emerald/proprietary/vendor/etc/init/init.volte_ua.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.volte_ua.rc \
-    vendor/xiaomi/emerald/proprietary/vendor/etc/init/init.vtservice_hidl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vtservice_hidl.rc \
+    vendor/xiaomi/emerald/proprietary/vendor/etc/init/init.vtservice_aidl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vtservice_aidl.rc \
     vendor/xiaomi/emerald/proprietary/vendor/etc/init/ipsec_mon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ipsec_mon.rc \
     vendor/xiaomi/emerald/proprietary/vendor/etc/init/miteelog.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/miteelog.rc \
     vendor/xiaomi/emerald/proprietary/vendor/etc/init/mtk_agpsd_p.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/mtk_agpsd_p.rc \
@@ -809,7 +809,6 @@ PRODUCT_PACKAGES += \
     sound_trigger.primary.mt6789 \
     vendor.mediatek.hardware.mms@1.6-impl \
     vendor.mediatek.hardware.nvram@1.1-impl \
-    vendor.mediatek.hardware.videotelephony@1.0-impl \
     vendor.xiaomi.sensor.citsensorservice@2.0-impl \
     libCamera_gc16b3aacfrontmipiraw_3rd_party_Capture \
     libCamera_gc16b3aacfrontmipiraw_3rd_party_Capture_mfnr \
@@ -1422,7 +1421,6 @@ PRODUCT_PACKAGES += \
     libjpeg-alpha-oal_vendor \
     libjpeg-alpha_vendor \
     libksensor \
-    liblibarm_mali_config_sysprops \
     libmi_bokehpre \
     libmialgo_ai_vision \
     libmialgo_sd \
@@ -1901,7 +1899,6 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.pq@2.7 \
     vendor.mediatek.hardware.pq@2.8 \
     vendor.mediatek.hardware.pq@2.9 \
-    vendor.mediatek.hardware.videotelephony@1.0_vendor \
     vendor.xiaomi.sensor.citsensorservice@1.1 \
     vendor.xiaomi.sensor.citsensorservice@2.0 \
     libaudiotoolkit \
@@ -1944,7 +1941,7 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.nvram@1.1-service \
     vendor.mediatek.hardware.pq@2.2-service \
     vendor.xiaomi.sensor.citsensorservice@2.0-service \
-    vtservice_hidl \
+    vtservice_aidl \
     ipsec_mon \
     mi_thermald \
     miteelog \
