@@ -1337,7 +1337,6 @@ PRODUCT_PACKAGES += \
     libcamera_scene \
     libcarrierconfig \
     libccci_util \
-    libclang_rt.ubsan_standalone-aarch64-android \
     libclient2slpi.notifier \
     libcmdl \
     libcmdl_ndk.mtk.vndk \
