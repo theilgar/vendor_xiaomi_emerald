@@ -6,8 +6,6 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/xiaomi/emerald
 
 PRODUCT_COPY_FILES += \
-    vendor/xiaomi/emerald/proprietary/vendor/lib64/libaudio_aidl_conversion_common_ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaudio_aidl_conversion_common_ndk.so \
-    vendor/xiaomi/emerald/proprietary/vendor/lib64/android.hardware.camera.common-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.camera.common-V2-ndk.so \
     vendor/xiaomi/emerald/proprietary/odm/etc/camera/camerabooster.json:$(TARGET_COPY_OUT_ODM)/etc/camera/camerabooster.json \
     vendor/xiaomi/emerald/proprietary/system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.hotwordenrollment.common.util.xml \
     vendor/xiaomi/emerald/proprietary/vendor/etc/AbnormalDisplayLog_dynamic.ds:$(TARGET_COPY_OUT_VENDOR)/etc/AbnormalDisplayLog_dynamic.ds \
