@@ -722,7 +722,6 @@ PRODUCT_PACKAGES += \
     libvp9dec_sa.ca7 \
     android.hardware.audio.core-impl-mediatek \
     android.hardware.bluetooth.audio-impl-mediatek \
-    android.hardware.camera.common-V2-ndk \
     android.hardware.power-service-mediatek \
     awinic.audio.effect \
     com.xiaomi.plugin.capbokeh \
