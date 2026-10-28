@@ -1916,7 +1916,6 @@ PRODUCT_PACKAGES += \
     mapper.mediatek.xml \
     mtkgnss-batching.xml \
     mtkpower_applist-mtk-default.xml \
-    nfc2-service-nxp.xml \
     power-mediatek.xml \
     batterysecret \
     ccci_mdinit \
