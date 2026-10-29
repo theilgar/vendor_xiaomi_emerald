@@ -6,6 +6,7 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/xiaomi/emerald
 
 PRODUCT_COPY_FILES += \
+    vendor/xiaomi/emerald/proprietary/vendor/etc/init/thermal-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/thermal-mediatek.rc \
     vendor/xiaomi/emerald/proprietary/odm/etc/camera/camerabooster.json:$(TARGET_COPY_OUT_ODM)/etc/camera/camerabooster.json \
     vendor/xiaomi/emerald/proprietary/system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.hotwordenrollment.common.util.xml \
     vendor/xiaomi/emerald/proprietary/vendor/etc/AbnormalDisplayLog_dynamic.ds:$(TARGET_COPY_OUT_VENDOR)/etc/AbnormalDisplayLog_dynamic.ds \
@@ -684,6 +685,10 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/emerald/proprietary/vendor/mitee/ta/f13010e0-2ae1-11e5-896a0002a5d5c51d.ta:$(TARGET_COPY_OUT_VENDOR)/mitee/ta/f13010e0-2ae1-11e5-896a0002a5d5c51d.ta
 
 PRODUCT_PACKAGES += \
+    android.hardware.camera.common-V2-ndk_stock \
+    libaudio_aidl_conversion_common_ndk_stock \
+    libtinyxml2_stock \
+    CommandService.mediatek.xml \
     AVCSecureVdecCA \
     HEVCSecureVdecCA \
     VP9SecureVdecCA \

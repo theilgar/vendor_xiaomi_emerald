@@ -2079,7 +2079,7 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "android.hardware.common-V2-ndk",
                 "android.hardware.common.fmq-V1-ndk",
-                "libtinyxml2",
+                "libtinyxml2_stock",
                 "libc++",
                 "libc",
                 "libm",
@@ -2185,7 +2185,7 @@ cc_prebuilt_library_shared {
                 "libhardware",
                 "libaudioutils",
                 "libtinyalsa",
-                "libtinyxml2",
+                "libtinyxml2_stock",
                 "libaudiotoolkit_vendor",
                 "libmedia_helper",
                 "libladder",
@@ -2340,7 +2340,7 @@ cc_prebuilt_library_shared {
                 "libladder",
                 "libcomposer_ext",
                 "libdmabufheap",
-                "libtinyxml2",
+                "libtinyxml2_stock",
                 "libdpframework",
                 "libged",
                 "libgralloc_extra",
@@ -2662,7 +2662,7 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "libcutils",
                 "libpq_sec",
-                "libtinyxml2",
+                "libtinyxml2_stock",
                 "vendor.mediatek.hardware.pq_aidl-V7-ndk",
                 "libcomposer_ext",
                 "libui",
@@ -20849,7 +20849,7 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "liblog",
                 "libexpat",
-                "libtinyxml2",
+                "libtinyxml2_stock",
                 "libhidlbase",
                 "libhardware",
                 "vendor.mediatek.hardware.netdagent@1.0",
@@ -21015,7 +21015,7 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "libcutils",
                 "liblog",
-                "libtinyxml2",
+                "libtinyxml2_stock",
                 "libc++",
                 "libc",
                 "libm",
@@ -21044,7 +21044,7 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "libcutils",
                 "liblog",
-                "libtinyxml2",
+                "libtinyxml2_stock",
                 "libc++",
                 "libc",
                 "libm",
@@ -21215,7 +21215,7 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "libutils",
                 "libtinyalsa",
-                "libtinyxml2",
+                "libtinyxml2_stock",
                 "liblog",
                 "libnvram",
                 "libcrypto",
@@ -21280,7 +21280,7 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libhardware",
                 "libhardware_legacy",
-                "libtinyxml2",
+                "libtinyxml2_stock",
                 "libpqxmlparser",
                 "libc++",
                 "libc",
@@ -37317,3 +37317,134 @@ cc_prebuilt_binary {
     prefer: true,
     soc_specific: true,
 }
+
+cc_prebuilt_library_shared {
+    name: "libtinyxml2_stock",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libtinyxml2_stock.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaudio_aidl_conversion_common_ndk_stock",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libaudio_aidl_conversion_common_ndk_stock.so",
+            ],
+            shared_libs: [
+                "android.media.audio.common.types-V4-ndk",
+                "android.hardware.audio.common-V4-ndk",
+                "liblog",
+                "libstagefright_foundation",
+                "libutils",
+                "libbase",
+                "libbinder_ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.camera.common-V2-ndk_stock",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/android.hardware.camera.common-V2-ndk_stock.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    soc_specific: true,
+}
+
+//cc_prebuilt_binary {
+//    name: "android.hardware.thermal-service.mediatek_stock",
+//    stem: "android.hardware.thermal-service.mediatek",
+//    owner: "xiaomi",
+//    target: {
+//        android_arm64: {
+//            srcs: [
+//                "proprietary/vendor/bin/hw/android.hardware.thermal-service.mediatek",
+//            ],
+//            shared_libs: [
+//                "libbinder_ndk",
+//                "liblog",
+//                "libcutils",
+//                "libutils",
+//                "libhardware",
+//                "libbase",
+//                "libc++",
+//                "libc",
+//                "libm",
+//                "libdl",
+//            ],
+//        },
+//    },
+//    compile_multilib: "64",
+//    strip: {
+//        none: true,
+//    },
+//    check_elf_files: false,
+//    relative_install_path: "hw",
+//    soc_specific: true,
+//}
+//
+prebuilt_etc_xml {
+    name: "CommandService.mediatek.xml",
+    owner: "xiaomi",
+    src: "proprietary/vendor/etc/vintf/manifest/CommandService.xml",
+    filename: "CommandService.xml",
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+//prebuilt_etc_xml {
+//    name: "thermal-mediatek.mediatek.xml",
+//    owner: "xiaomi",
+//    src: "proprietary/vendor/etc/vintf/manifest/thermal-mediatek.xml",
+//    filename: "thermal-mediatek.xml",
+//    sub_dir: "vintf/manifest",
+//    soc_specific: true,
+//}
