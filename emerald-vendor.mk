@@ -498,7 +498,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/emerald/proprietary/vendor/etc/gralloc/dpu_aeu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/dpu_aeu.xml \
     vendor/xiaomi/emerald/proprietary/vendor/etc/gralloc/gpu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/gpu.xml \
     vendor/xiaomi/emerald/proprietary/vendor/etc/gralloc/vpu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/vpu.xml \
-    vendor/xiaomi/emerald/proprietary/vendor/etc/init/android.hardware.audio.service-aidl.mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.audio.service-aidl.mediatek.rc \
+    # [OSS REPLACED] vendor/xiaomi/emerald/proprietary/vendor/etc/init/android.hardware.audio.service-aidl.mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.audio.service-aidl.mediatek.rc \
     vendor/xiaomi/emerald/proprietary/vendor/etc/init/android.hardware.gatekeeper-service.mitee.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper-service.mitee.rc \
     vendor/xiaomi/emerald/proprietary/vendor/etc/init/android.hardware.gnss-service.mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gnss-service.mediatek.rc \
     vendor/xiaomi/emerald/proprietary/vendor/etc/init/android.hardware.graphics.allocator-V2-service-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator-V2-service-mediatek.rc \
@@ -1901,7 +1901,7 @@ PRODUCT_PACKAGES += \
     EngineerMode \
     com.android.hotwordenrollment.common.util \
     android.hardware.audio.effect.service-aidl.xml \
-    android.hardware.audio.service-aidl.mediatek.xml \
+    # [OSS REPLACED] android.hardware.audio.service-aidl.mediatek.xml \
     android.hardware.gatekeeper-service.mitee.xml \
     android.hardware.security.keymint-service.mitee.xml \
     android.hardware.security.secureclock-service.mitee.xml \
@@ -1918,12 +1918,12 @@ PRODUCT_PACKAGES += \
     mtkgnss-batching.xml \
     mtkpower_applist-mtk-default.xml \
     power-mediatek.xml \
-    batterysecret \
+    # [OSS REPLACED] batterysecret \
     ccci_mdinit \
     ccci_rpcd \
     conninfra_loader \
     gsm0710muxd \
-    android.hardware.audio.service-aidl.mediatek \
+    # [OSS REPLACED] android.hardware.audio.service-aidl.mediatek \
     android.hardware.gatekeeper-service.mitee \
     android.hardware.gnss-service.mediatek \
     android.hardware.graphics.composer@3.4-service \
@@ -1936,14 +1936,14 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.gnss-service \
     vendor.mediatek.hardware.mmagent-service \
     vendor.mediatek.hardware.mms-service \
-    vendor.mediatek.hardware.mtkpower-service.mediatek \
+    # [OSS REPLACED] vendor.mediatek.hardware.mtkpower-service.mediatek \
     vendor.mediatek.hardware.mtkpower_applist-service.mediatek \
     vendor.mediatek.hardware.nvram-service \
     vendor.mediatek.hardware.pq_aidl-service \
     vtservice_aidl \
     ipsec_mon \
     iwpriv \
-    mi_thermald \
+    # [OSS REPLACED] mi_thermald \
     miteelog \
     mnld \
     v3avpud-64b.mt6789 \

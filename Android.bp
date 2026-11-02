@@ -35771,14 +35771,15 @@ prebuilt_etc_xml {
     soc_specific: true,
 }
 
-prebuilt_etc_xml {
-    name: "android.hardware.audio.service-aidl.mediatek.xml",
-    owner: "xiaomi",
-    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.audio.service-aidl.xml",
-    filename: "android.hardware.audio.service-aidl.xml",
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
+// Replaced by open-source implementation in device tree / hardware_mediatek:
+// prebuilt_etc_xml {
+//     name: "android.hardware.audio.service-aidl.mediatek.xml",
+//     owner: "xiaomi",
+//     src: "proprietary/vendor/etc/vintf/manifest/android.hardware.audio.service-aidl.xml",
+//     filename: "android.hardware.audio.service-aidl.xml",
+//     sub_dir: "vintf/manifest",
+//     soc_specific: true,
+// }
 
 prebuilt_etc_xml {
     name: "android.hardware.gatekeeper-service.mitee.xml",
@@ -35924,37 +35925,38 @@ prebuilt_etc_xml {
     soc_specific: true,
 }
 
-cc_prebuilt_binary {
-    name: "batterysecret",
-    owner: "xiaomi",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/batterysecret",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libutils",
-                "libbinder",
-                "libbase",
-                "liblog",
-                "libhidlbase",
-                "libhidltransport",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    check_elf_files: false,
-    prefer: true,
-    soc_specific: true,
-}
+// Replaced by open-source implementation in device tree / hardware_mediatek:
+// cc_prebuilt_binary {
+//     name: "batterysecret",
+//     owner: "xiaomi",
+//     target: {
+//         android_arm64: {
+//             srcs: [
+//                 "proprietary/vendor/bin/batterysecret",
+//             ],
+//             shared_libs: [
+//                 "libcutils",
+//                 "libutils",
+//                 "libbinder",
+//                 "libbase",
+//                 "liblog",
+//                 "libhidlbase",
+//                 "libhidltransport",
+//                 "libc++",
+//                 "libc",
+//                 "libm",
+//                 "libdl",
+//             ],
+//         },
+//     },
+//     compile_multilib: "64",
+//     strip: {
+//         none: true,
+//     },
+//     check_elf_files: false,
+//     prefer: true,
+//     soc_specific: true,
+// }
 
 cc_prebuilt_binary {
     name: "ccci_mdinit",
@@ -36076,59 +36078,60 @@ cc_prebuilt_binary {
     soc_specific: true,
 }
 
-cc_prebuilt_binary {
-    name: "android.hardware.audio.service-aidl.mediatek",
-    owner: "xiaomi",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/android.hardware.audio.service-aidl.mediatek",
-            ],
-            shared_libs: [
-                "android.hardware.soundtrigger3-V3-ndk",
-                "android.hardware.audio.core-V3-ndk",
-                "android.hardware.bluetooth.audio-V5-ndk",
-                "android.hardware.audio.core.sounddose-V3-ndk",
-                "android.media.audio.common.types-V4-ndk",
-                "libalsautilsv2",
-                "libaudioaidlcommon",
-                "libaudioutils",
-                "libbase",
-                "libbinder_ndk",
-                "libcutils",
-                "libfmq",
-                "libnbaio_mono",
-                "libtinyalsav2",
-                "libutils",
-                "libxml2",
-                "android.hardware.common-V2-ndk",
-                "android.hardware.common.fmq-V1-ndk",
-                "android.hardware.audio.core-impl-mediatek",
-                "libbluetooth_audio_session_aidl_mtk",
-                "libmedia_helper",
-                "libstagefright_foundation",
-                "android.hardware.bluetooth.audio-impl-mediatek",
-                "android.hardware.audio.effect.aidl-impl-mediatek",
-                "liblog",
-                "vendor.mediatek.hardware.audio-V1-ndk",
-                "vendor.mediatek.hardware.audio-impl",
-                "android.hardware.soundtrigger3-impl",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    check_elf_files: false,
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
+// Replaced by open-source implementation in device tree / hardware_mediatek:
+// cc_prebuilt_binary {
+//     name: "android.hardware.audio.service-aidl.mediatek",
+//     owner: "xiaomi",
+//     target: {
+//         android_arm64: {
+//             srcs: [
+//                 "proprietary/vendor/bin/hw/android.hardware.audio.service-aidl.mediatek",
+//             ],
+//             shared_libs: [
+//                 "android.hardware.soundtrigger3-V3-ndk",
+//                 "android.hardware.audio.core-V3-ndk",
+//                 "android.hardware.bluetooth.audio-V5-ndk",
+//                 "android.hardware.audio.core.sounddose-V3-ndk",
+//                 "android.media.audio.common.types-V4-ndk",
+//                 "libalsautilsv2",
+//                 "libaudioaidlcommon",
+//                 "libaudioutils",
+//                 "libbase",
+//                 "libbinder_ndk",
+//                 "libcutils",
+//                 "libfmq",
+//                 "libnbaio_mono",
+//                 "libtinyalsav2",
+//                 "libutils",
+//                 "libxml2",
+//                 "android.hardware.common-V2-ndk",
+//                 "android.hardware.common.fmq-V1-ndk",
+//                 "android.hardware.audio.core-impl-mediatek",
+//                 "libbluetooth_audio_session_aidl_mtk",
+//                 "libmedia_helper",
+//                 "libstagefright_foundation",
+//                 "android.hardware.bluetooth.audio-impl-mediatek",
+//                 "android.hardware.audio.effect.aidl-impl-mediatek",
+//                 "liblog",
+//                 "vendor.mediatek.hardware.audio-V1-ndk",
+//                 "vendor.mediatek.hardware.audio-impl",
+//                 "android.hardware.soundtrigger3-impl",
+//                 "libc++",
+//                 "libc",
+//                 "libm",
+//                 "libdl",
+//             ],
+//         },
+//     },
+//     compile_multilib: "64",
+//     strip: {
+//         none: true,
+//     },
+//     check_elf_files: false,
+//     prefer: true,
+//     relative_install_path: "hw",
+//     soc_specific: true,
+// }
 
 cc_prebuilt_binary {
     name: "android.hardware.gatekeeper-service.mitee",
@@ -36586,44 +36589,45 @@ cc_prebuilt_binary {
     soc_specific: true,
 }
 
-cc_prebuilt_binary {
-    name: "vendor.mediatek.hardware.mtkpower-service.mediatek",
-    owner: "xiaomi",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/vendor.mediatek.hardware.mtkpower-service.mediatek",
-            ],
-            shared_libs: [
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libhardware",
-                "libhidlbase",
-                "libhardware_legacy",
-                "vendor.mediatek.hardware.mtkpower-V3-ndk",
-                "vendor.mediatek.hardware.mtkpower-aidl-impl",
-                "android.hardware.power-service-mediatek",
-                "libbase",
-                "libbinder_ndk",
-                "android.hardware.power-V6-ndk",
-                "libpower_timer",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    check_elf_files: false,
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
+// Replaced by open-source implementation in device tree / hardware_mediatek:
+// cc_prebuilt_binary {
+//     name: "vendor.mediatek.hardware.mtkpower-service.mediatek",
+//     owner: "xiaomi",
+//     target: {
+//         android_arm64: {
+//             srcs: [
+//                 "proprietary/vendor/bin/hw/vendor.mediatek.hardware.mtkpower-service.mediatek",
+//             ],
+//             shared_libs: [
+//                 "liblog",
+//                 "libutils",
+//                 "libcutils",
+//                 "libhardware",
+//                 "libhidlbase",
+//                 "libhardware_legacy",
+//                 "vendor.mediatek.hardware.mtkpower-V3-ndk",
+//                 "vendor.mediatek.hardware.mtkpower-aidl-impl",
+//                 "android.hardware.power-service-mediatek",
+//                 "libbase",
+//                 "libbinder_ndk",
+//                 "android.hardware.power-V6-ndk",
+//                 "libpower_timer",
+//                 "libc++",
+//                 "libc",
+//                 "libm",
+//                 "libdl",
+//             ],
+//         },
+//     },
+//     compile_multilib: "64",
+//     strip: {
+//         none: true,
+//     },
+//     check_elf_files: false,
+//     prefer: true,
+//     relative_install_path: "hw",
+//     soc_specific: true,
+// }
 
 cc_prebuilt_binary {
     name: "vendor.mediatek.hardware.mtkpower_applist-service.mediatek",
@@ -36810,34 +36814,35 @@ cc_prebuilt_binary {
     soc_specific: true,
 }
 
-cc_prebuilt_binary {
-    name: "mi_thermald",
-    owner: "xiaomi",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/mi_thermald",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libcrypto",
-                "libssl",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    check_elf_files: false,
-    prefer: true,
-    soc_specific: true,
-}
+// Replaced by open-source implementation in device tree / hardware_mediatek:
+// cc_prebuilt_binary {
+//     name: "mi_thermald",
+//     owner: "xiaomi",
+//     target: {
+//         android_arm64: {
+//             srcs: [
+//                 "proprietary/vendor/bin/mi_thermald",
+//             ],
+//             shared_libs: [
+//                 "libcutils",
+//                 "liblog",
+//                 "libcrypto",
+//                 "libssl",
+//                 "libc++",
+//                 "libc",
+//                 "libm",
+//                 "libdl",
+//             ],
+//         },
+//     },
+//     compile_multilib: "64",
+//     strip: {
+//         none: true,
+//     },
+//     check_elf_files: false,
+//     prefer: true,
+//     soc_specific: true,
+// }
 
 cc_prebuilt_binary {
     name: "miteelog",
