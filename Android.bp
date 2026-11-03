@@ -2250,6 +2250,7 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
+/*
 cc_prebuilt_library_shared {
     name: "consumerir.mt6789",
     owner: "xiaomi",
@@ -2277,6 +2278,7 @@ cc_prebuilt_library_shared {
     prefer: true,
     soc_specific: true,
 }
+*/
 
 cc_prebuilt_library_shared {
     name: "gps.default",

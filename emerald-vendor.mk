@@ -750,7 +750,8 @@ PRODUCT_PACKAGES += \
     android.hardware.soundtrigger3-impl \
     audio.primary.mediatek \
     audio.r_submix.mediatek \
-    consumerir.mt6789 \
+# Replaced by open-source device/xiaomi/emerald/consumerir
+#    consumerir.mt6789 \
     gps.default \
     hwcomposer.mtk_common \
     libgf_hal \
